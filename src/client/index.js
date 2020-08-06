@@ -305,7 +305,7 @@ export class BncClient {
     }
 
     const signedTx = await this._prepareTransaction(msg, signMsg, fromAddress, sequence, memo)
-    return this._broadcastDelegate(signedTx)
+    return signedTx
   }
 
   /**
