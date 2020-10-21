@@ -399,6 +399,7 @@ export class BncClient {
 
     const signedTx = await this._prepareTransaction(msg, signMsg, fromAddress, sequence, memo)
     const signedBz = signedTx.serialize()
+    // @ts-ignore
     signedTx.serialized = signedBz
     return signedTx
   }

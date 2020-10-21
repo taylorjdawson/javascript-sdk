@@ -1,6 +1,6 @@
 {
   "name": "bnb-javascript-sdk-nobroadcast",
-  "version": "2.16.10",
+  "version": "2.16.11",
   "license": "Apache-2.0",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "yarn": "yarn",
+    "test-module": "node __tests__/test-module.js",
     "test": "cross-env NODE_ENV=test jest",
     "test:ledger": "qunit --require babel-polyfiltypl tests-ledger/tests.js",
     "test:ledger:browser": "./tests-ledger/run-browser-tests.sh",
@@ -21,8 +22,6 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.10.4",
-    "@ledgerhq/hw-transport-u2f": "^5.9.0",
-    "@ledgerhq/hw-transport-web-ble": "^5.9.0",
     "@types/bech32": "^1.1.2",
     "@types/big.js": "^4.0.5",
     "@types/bn.js": "^4.11.6",
@@ -43,7 +42,6 @@
     "bn.js": "^4.11.8",
     "camelcase": "^5.3.1",
     "elliptic": "^6.0.0",
-    "crypto-browserify": "^3.12.0",
     "crypto-js": "^3.1.9-1",
     "eslint-utils": "^1.4.2",
     "events": "^3.0.0",
@@ -58,9 +56,6 @@
     "url": "^0.11.0",
     "uuid": "^3.3.2",
     "websocket-stream": "^5.5.0"
-  },
-  "optionalDependencies": {
-    "@ledgerhq/hw-transport-node-hid": "^5.10.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.4",

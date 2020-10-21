@@ -1,15 +1,13 @@
 
-
-
 const BnbApiClient = require('../lib/index');
-
+//console.log(BnbApiClient)
 const api = 'https://dex.binance.org'; /// api string
 
 
 //let privKey = WALLET_BNB_MASTER_PRIVATE; // privkey hexstring (keep this safe)
 //log.info(tag,"privKey: ",privKey)
 
-const bnbClient = new BnbApiClient(api);
+
 
 
 let addressTo = "bnb1v7wds8atg9pxss86vq5qjuz38wqsadq7e5m2rr"
@@ -20,11 +18,13 @@ let message = ""
 let build_tx = async function(){
   let tag = " | build_tx | "
   try{
+    const bnbClient = new BnbApiClient.BncClient(api);
+
     console.log(tag,"checkpoint 1 ")
     await bnbClient.chooseNetwork("mainnet"); // or this can be "testnet"
     console.log(tag,"checkpoint 2 ")
 
-    await bnbClient.setPrivateKey("7df076a806f0a3ea4724d3191ea88009403dcc5020eb71d9daba339766622688");
+    await bnbClient.setPrivateKey("a7102ed6f042a151e6699d69f3ad27c49d4f0dbbc3650bd203f8d16e2cea6f9d");
     console.log(tag,"checkpoint 3 ")
 
     await bnbClient.initChain();
