@@ -1,9 +1,10 @@
 {
   "name": "bnb-javascript-sdk-nobroadcast",
-  "version": "2.16.9",
+  "version": "2.16.10",
   "license": "Apache-2.0",
   "main": "lib/index.js",
   "scripts": {
+    "yarn": "yarn",
     "test": "cross-env NODE_ENV=test jest",
     "test:ledger": "qunit --require babel-polyfill tests-ledger/tests.js",
     "test:ledger:browser": "./tests-ledger/run-browser-tests.sh",
