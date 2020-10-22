@@ -3,7 +3,7 @@ import Big, { BigSource } from "big.js"
 import * as crypto from "../../crypto"
 import { AminoPrefix } from "../tx"
 
-import { BaseMsg, Msg, SignMsg } from "./"
+import { BaseMsg, Msg, SignMsg } from "./base"
 
 export interface Coin {
   denom: string

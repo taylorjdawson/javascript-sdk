@@ -1,6 +1,6 @@
 import Big from "big.js"
 
-import { BaseMsg, Msg, SignMsg } from "../"
+import { BaseMsg, Msg, SignMsg } from "../base"
 import * as crypto from "../../../crypto"
 import { AminoPrefix } from "../../tx"
 
