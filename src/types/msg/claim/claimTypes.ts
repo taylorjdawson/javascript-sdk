@@ -1,4 +1,4 @@
-import { Coin } from ".."
+import { Coin } from '../send'
 
 export enum ClaimTypes {
   ClaimTypeSkipSequence = 0x1,
